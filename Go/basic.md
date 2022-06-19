@@ -1,8 +1,6 @@
 # Go language basic
 
-## I/O
-
-### Sample1
+## printf
 
 ```Go
 package main
@@ -10,7 +8,31 @@ package main
 import (
 	"fmt"
 	"math"
-    "math/cmplx"
+)
+
+func main() {
+    var a, b int = 1, 2
+
+	//cast
+	var i int = 5
+    var z uint = uint(i)
+
+    const World = "世界"
+
+	fmt.Printf("Now you have %f problems.\n", math.Sqrt(7))
+	fmt.Println(a, b)
+    fmt.Printf("Type: %T Value: %v\n", World, World)
+	fmt.Printf("Type: %T Value: %v\n", z, z)
+}
+```
+
+## function call
+
+```Go
+package main
+
+import (
+	"fmt"
 )
 
 func add(x int, y int) int {
@@ -23,34 +45,20 @@ func split(sum int) (x, y int) {
 	return
 }
 
-//Named return values
 func swap(x, y string) (string, string) {
 	return y, x
 }
 
-var c, python, java bool
-
-var (
-	ToBe   bool       = false
-	MaxInt uint64     = 1<<64 - 1
-	z      complex128 = cmplx.Sqrt(-5 + 12i)
-)
 
 func main() {
-    var i, j int = 1, 2
-    var c, python, java = true, false, "no!"
-    k := 3
-    var z uint = uint(i)
-    const World = "世界"
 
-	fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
-	fmt.Println(math.Pi)
     fmt.Println(add(42, 13))
+
+	//Named return values
     fmt.Println(split(17))
+
+	//Multiple return values
     a, b := swap("hello", "world")
-	fmt.Println(a, b)
-    fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
-	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
-	fmt.Printf("Type: %T Value: %v\n", z, z)
+	fmt.Println(a,b)
 }
 ```
