@@ -159,7 +159,7 @@ int MyNew(HWND hEdit)
     lstrcpy(szFile, TEXT(""));
     return 0;
 }
-
+//Open a file in UTF-16
 int MyOpen(HWND hEdit)
 {
     int id;
@@ -228,7 +228,7 @@ int MyOpen(HWND hEdit)
 
     return 0;
 }
-
+//Save a file in UTF-16
 int MySaveAs(HWND hEdit)
 {
     OPENFILENAME ofn;
