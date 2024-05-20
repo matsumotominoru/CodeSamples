@@ -1,0 +1,33 @@
+HKCR
+{
+	EventCtrl.EventControl.1 = s 'EventControl Class'
+	{
+		CLSID = s '{A0BA7627-771B-11D2-AB96-0000B4725554}'
+	}
+	EventCtrl.EventControl = s 'EventControl Class'
+	{
+		CLSID = s '{A0BA7627-771B-11D2-AB96-0000B4725554}'
+		CurVer = s 'EventCtrl.EventControl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A0BA7627-771B-11D2-AB96-0000B4725554} = s 'EventControl Class'
+		{
+			ProgID = s 'EventCtrl.EventControl.1'
+			VersionIndependentProgID = s 'EventCtrl.EventControl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{43D2550D-B364-11D2-AC0F-0000B4725554}'
+			'Version' = s '1.0'
+		}
+	}
+}

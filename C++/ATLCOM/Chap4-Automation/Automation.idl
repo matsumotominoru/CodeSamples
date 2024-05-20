@@ -1,0 +1,55 @@
+// Automation.idl : Automation.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (Automation.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(9542BEB1-6FB8-11D1-A607-00A0C94BC9C3),
+		dual,
+		helpstring("IAuto Interface"),
+		pointer_default(unique)
+	]
+	interface IAuto : IDispatch
+	{
+		[id(1), helpstring("ﾒｿｯﾄﾞ Greeting")] HRESULT Greeting([in] BSTR bstrName, [out,retval] BSTR* bstrGreeting);
+		[id(2), helpstring("ﾒｿｯﾄﾞ Value")] HRESULT Value([in] LONG lVal);
+	};
+
+   [
+      object,
+      uuid(9542BEB3-6FB8-11D1-A607-00A0C94BC9C3),
+      dual,
+      helpstring("IAuto2 Interface"),
+      pointer_default(unique)
+   ]
+   interface IAuto2 : IDispatch
+   {
+		[id(1), helpstring("ﾒｿｯﾄﾞ GetGender")] HRESULT GetGender([in] BSTR bstrName, [out, retval] BSTR* bstrGender);
+		[id(2), helpstring("ﾒｿｯﾄﾞ Value2")] HRESULT Value2([in] LONG lVal);
+   };
+
+
+[
+	uuid(9542BEA4-6FB8-11D1-A607-00A0C94BC9C3),
+	version(1.0),
+	helpstring("Automation 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library AUTOMATIONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(9542BEB2-6FB8-11D1-A607-00A0C94BC9C3),
+		helpstring("Auto Class")
+	]
+	coclass Auto
+	{
+		[default] interface IAuto;
+		interface IAuto2;
+	};
+};

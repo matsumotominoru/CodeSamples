@@ -1,0 +1,38 @@
+'------------------------------
+'コード順に並べ替えて会員名簿印刷
+'------------------------------
+Sub 会員名簿印刷()
+
+    Application.ScreenUpdating = False
+    Worksheets("会員名簿").Activate
+    If Worksheets("会員名簿").AutoFilterMode = True Then
+        Range("A3").AutoFilter
+    End If
+
+    Range("A3").SortSpecial Key1:=Range("A3"), Header:=xlGuess
+    
+    'ActiveSheet.PrintOut
+    Application.ScreenUpdating = True
+    ActiveSheet.PrintPreview
+
+End Sub
+
+'---------------------
+'男性会員のみ抽出
+'---------------------
+Sub 男性会員抽出()
+    Application.ScreenUpdating = False
+    Worksheets("会員名簿").Activate
+    Range("A3").AutoFilter Field:=5, Criteria1:="1"
+    Range("A3").SortSpecial Key1:=Range("A3"), Header:=xlGuess
+End Sub
+
+'---------------------
+'女性会員のみ抽出
+'---------------------
+Sub 女性会員抽出()
+    Application.ScreenUpdating = False
+    Worksheets("会員名簿").Activate
+    Range("A3").AutoFilter Field:=5, Criteria1:="2"
+    Range("A3").SortSpecial Key1:=Range("A3"), Header:=xlGuess
+End Sub

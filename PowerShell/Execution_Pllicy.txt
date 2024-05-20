@@ -1,0 +1,4 @@
+By default, Running PowerShell scripts is disabled.
+For more information, see about_Execution_Policies at https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-5.1
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass

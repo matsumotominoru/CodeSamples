@@ -1,0 +1,87 @@
+// BUObject.idl : BUObject.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (BUObject.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(5B586A1F-8465-11D2-ABC1-0000B4725554),
+		dual,
+		helpstring("IEmployee Interface"),
+		pointer_default(unique)
+	]
+	interface IEmployee : IDispatch
+	{
+		[propget, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Name")] HRESULT Name([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Name")] HRESULT Name([in] BSTR newVal);
+		[propget, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ EmployeeID")] HRESULT EmployeeID([out, retval] long *pVal);
+		[propput, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ EmployeeID")] HRESULT EmployeeID([in] long newVal);
+	};
+	[
+		object,
+		uuid(5B586A21-8465-11D2-ABC1-0000B4725554),
+		dual,
+		helpstring("IDeveloperCollection Interface"),
+		pointer_default(unique)
+	]
+	interface IDeveloperCollection : IDispatch
+	{
+		[id(0), helpstring("ﾒｿｯﾄﾞ Item")] HRESULT Item([in] VARIANT Index, [out, retval] LPVARIANT pItem);
+		[id(1), helpstring("ﾒｿｯﾄﾞ Add")] HRESULT Add([in] IEmployee* pEmployee);
+		[propget, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ Count")] HRESULT Count([out, retval] long *pVal);
+		[propget, id(-4), helpstring("ﾌﾟﾛﾊﾟﾃｨ _NewEnum"), restricted] HRESULT _NewEnum([out, retval] LPUNKNOWN *pVal);
+	};
+	[
+		object,
+		uuid(5B586A23-8465-11D2-ABC1-0000B4725554),
+		dual,
+		helpstring("IBusinessUnit Interface"),
+		pointer_default(unique)
+	]
+	interface IBusinessUnit : IDispatch
+	{
+		[propget, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Manager")] HRESULT Manager([out, retval] LPDISPATCH *pVal);
+		[propput, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Manager")] HRESULT Manager([in] LPDISPATCH newVal);
+		[propget, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ Secretary")] HRESULT Secretary([out, retval] LPDISPATCH *pVal);
+		[propput, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ Secretary")] HRESULT Secretary([in] LPDISPATCH newVal);
+		[propget, id(3), helpstring("ﾌﾟﾛﾊﾟﾃｨ Developers")] HRESULT Developers([out, retval] LPDISPATCH *pVal);
+	};
+
+[
+	uuid(5B586A13-8465-11D2-ABC1-0000B4725554),
+	version(1.0),
+	helpstring("BUObject 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library BUOBJECTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(5B586A20-8465-11D2-ABC1-0000B4725554),
+		helpstring("Employee Class")
+	]
+	coclass Employee
+	{
+		[default] interface IEmployee;
+	};
+	[
+		uuid(5B586A22-8465-11D2-ABC1-0000B4725554),
+		helpstring("DeveloperCollection Class")
+	]
+	coclass DeveloperCollection
+	{
+		[default] interface IDeveloperCollection;
+	};
+	[
+		uuid(5B586A24-8465-11D2-ABC1-0000B4725554),
+		helpstring("BusinessUnit Class")
+	]
+	coclass BusinessUnit
+	{
+		[default] interface IBusinessUnit;
+	};
+};

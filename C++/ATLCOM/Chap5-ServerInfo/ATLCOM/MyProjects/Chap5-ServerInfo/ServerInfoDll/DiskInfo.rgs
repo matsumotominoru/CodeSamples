@@ -1,0 +1,24 @@
+HKCR
+{
+	NoRemove DiskInfo.DiskInfo.1 = s 'DiskInfo Class'
+	{
+		NoRemove CLSID = s '{795CF252-7454-11D2-AB8F-0000B4725554}'
+	}
+	NoRemove DiskInfo.DiskInfo = s 'DiskInfo Class'
+	{
+		NoRemove CurVer = s 'DiskInfo.DiskInfo.1'
+	}
+	NoRemove CLSID
+	{
+		NoRemove  {795CF252-7454-11D2-AB8F-0000B4725554} = s 'DiskInfo Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			NoRemove ProgID = s 'DiskInfo.DiskInfo.1'
+			NoRemove VersionIndependentProgID = s 'DiskInfo.DiskInfo'
+			NoRemove val AppID = s '{35035403-6C02-11D1-B28D-00A0C94515AD}'
+		}
+	}
+}

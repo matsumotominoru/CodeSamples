@@ -1,0 +1,12 @@
+﻿Save c-file or cpp-file by UTF-8 without BOM.
+コンパイラのエンコーディング設定がUTF8になる？
+
+実行する前に、ターミナルで以下の設定を行う。
+Set chcp 65001.
+
+疑問
+ソースコード中のsetlocale関数はコンパイラのエンコーディング設定で代替できるか。
+
+TODO:gcc
+リテラル文字列(ひらがなと非SJIS文字列)をコンソール出力 →OK
+char/wchar_tで文字列を作成してひらがなと非SJIS文字列を入れてコンソール出力→どちらもNG

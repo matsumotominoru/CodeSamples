@@ -1,0 +1,11 @@
+// menu01.rc
+#include "resource.h"
+
+MYMENU MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "終了(&X)",                IDM_END
+    END
+    MENUITEM "ヘルプ(&H)",                  IDM_HELP
+END

@@ -1,0 +1,23 @@
+# Microsoft Developer Studio Generated Dependency File, included by ServerInfo.mak
+
+..\DiskInfo.cpp : \
+	"..\DiskInfo.h"\
+	"..\ServerInfo.h"\
+	
+
+.\ServerInfo.cpp : \
+	"..\DiskInfo.h"\
+	"..\ServerInfo.h"\
+	"..\ServerInfo_i.c"\
+	
+
+.\ServerInfo.rc : \
+	"..\ServerInfo.tlb"\
+	".\DiskInfo.rgs"\
+	".\ServerInfo.rgs"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"g:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

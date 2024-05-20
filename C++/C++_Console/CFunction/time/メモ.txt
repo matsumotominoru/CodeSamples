@@ -1,0 +1,9 @@
+○関数
+　①time
+　
+　②ctime_s
+　
+　③printf
+
+○型
+　①time_t

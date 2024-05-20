@@ -1,0 +1,26 @@
+HKCR
+{
+	ReturningAnObject.MainObject.1 = s 'MainObject Class'
+	{
+		CLSID = s '{35494FC2-6E15-11D2-AB83-0000B4725554}'
+	}
+	ReturningAnObject.MainObject = s 'MainObject Class'
+	{
+		CLSID = s '{35494FC2-6E15-11D2-AB83-0000B4725554}'
+		CurVer = s 'ReturningAnObject.MainObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {35494FC2-6E15-11D2-AB83-0000B4725554} = s 'MainObject Class'
+		{
+			ProgID = s 'ReturningAnObject.MainObject.1'
+			VersionIndependentProgID = s 'ReturningAnObject.MainObject'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{35494FB3-6E15-11D2-AB83-0000B4725554}'
+		}
+	}
+}

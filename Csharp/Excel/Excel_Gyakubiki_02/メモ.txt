@@ -1,0 +1,51 @@
+○概要
+　エクセルを開いて複数のセルの値を読み取り、dataGridViewに表示する。
+　COMのメモリ解放や例外処理を考慮しない。
+
+○参照の追加
+　参照の追加を押し、COMの「Microsoft Excel [Ver] Object Library」を追加
+　
+○コントロール
+　DataGridViewを置く。
+　プロパティ設定は不要
+
+○その他
+　//エクセルの表示
+　oXL.Visible = true;
+　
+　//Get a new workbook.ブックの新規作成
+　oWB = (Excel._Workbook)(oXL.Workbooks.Add( Missing.Value ));
+　
+　oSheet.Cells[1, 1] = "First Name";
+　
+　//新規シートの作成
+　Excel.Workbooks[1].Sheets.Add();
+　Excel.Workbooks["book1"].Sheets.Add();
+　
+　//Format A1:D1 as bold, vertical alignment = center.
+　oSheet.get_Range("A1", "D1").Font.Bold = true;
+　oSheet.get_Range("A1", "D1").VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+　
+　//Fill A2:B6 with an array of values (First and Last Names).
+     oSheet.get_Range("A2", "B6").Value2 = saNames;
+　
+　//Fill with a relative formula (=A2 & " " & B2).
+　oRng.Formula = "=A2 & \" \" & B2";
+　
+　//セルの書式を数値に
+　oRng.NumberFormat = "$0.00"
+　
+　//AutoFit(セルの高さ、幅の自動調整) columns
+　oRng.EntireColumn.AutoFit();
+　
+　//エクセルが編集できるようにする。
+　oXL.UserControl = true;
+　
+　//右端で折り返す
+　oResizeRange.WrapText = true;
+　
+　//シートの親ブックを取得
+　oWB = (Excel._Workbook)oWS.Parent;
+　
+　//値がある一番下のセルの行番号
+　int lastRow = oSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell , Type.Missing).Row;

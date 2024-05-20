@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{C738A225-76D4-11D2-AB94-0000B4725554} = s 'EventWatcher'
+		'EventWatcher.EXE'
+		{
+			val AppID = s {C738A225-76D4-11D2-AB94-0000B4725554}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+HKCR
+{
+	Wrox.ComDialog.1 = s 'ComDialog Class'
+	{
+		CLSID = s '{D55039F0-61B3-11D1-B28D-00A0C94515AD}'
+	}
+	Wrox.ComDialog = s 'ComDialog Class'
+	{
+		CurVer = s 'Wrox.ComDialog.1'
+		CLSID = s '{D55039F0-61B3-11D1-B28D-00A0C94515AD}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D55039F0-61B3-11D1-B28D-00A0C94515AD} = s 'ComDialog Class'
+		{
+			ProgID = s 'Wrox.ComDialog.1'
+			VersionIndependentProgID = s 'Wrox.ComDialog'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{4C061FE4-64D0-11D1-A159-64D6F8C00000}'
+		}
+	}
+}

@@ -1,0 +1,35 @@
+HKCR
+{
+	MsgMaps.Click.1 = s 'Click Class'
+	{
+		CLSID = s '{26A4A471-85A1-11D2-ABC6-0000B4725554}'
+		'Insertable'
+	}
+	MsgMaps.Click = s 'Click Class'
+	{
+		CLSID = s '{26A4A471-85A1-11D2-ABC6-0000B4725554}'
+		CurVer = s 'MsgMaps.Click.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {26A4A471-85A1-11D2-ABC6-0000B4725554} = s 'Click Class'
+		{
+			ProgID = s 'MsgMaps.Click.1'
+			VersionIndependentProgID = s 'MsgMaps.Click'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{26A4A464-85A1-11D2-ABC6-0000B4725554}'
+			'Version' = s '1.0'
+		}
+	}
+}

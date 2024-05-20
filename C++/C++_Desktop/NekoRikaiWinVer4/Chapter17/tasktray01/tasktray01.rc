@@ -1,0 +1,30 @@
+// tasktray01.rc
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU
+BEGIN
+    POPUP "ダミーです"
+    BEGIN
+        MENUITEM "タスクトレイに入れる(&R)",    IDM_TRAY
+        MENUITEM "終了(&X)",                    IDM_END
+    END
+END
+
+MYTRAY MENU
+BEGIN
+    POPUP "ダミーです"
+    BEGIN
+        MENUITEM "タスクトレイより出す(&O)",    IDM_OUT
+        MENUITEM "終了(&X)",                    IDM_END
+    END
+END
+
+/////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+MYICON                  ICON                    "icon1.ico"

@@ -1,0 +1,25 @@
+HKCR
+{
+	Automation.Auto.1 = s 'Auto Class'
+	{
+		CLSID = s '{9542BEB2-6FB8-11D1-A607-00A0C94BC9C3}'
+	}
+	Automation.Auto = s 'Auto Class'
+	{
+		CurVer = s 'Automation.Auto.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9542BEB2-6FB8-11D1-A607-00A0C94BC9C3} = s 'Auto Class'
+		{
+			ProgID = s 'Automation.Auto.1'
+			VersionIndependentProgID = s 'Automation.Auto'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E78509E3-73BB-11D2-AB8A-0000B4725554}'
+		}
+	}
+}

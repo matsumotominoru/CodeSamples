@@ -1,0 +1,41 @@
+// toolbar02.rc
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "新規作成(&N)",          IDM_NEW
+        MENUITEM "開く(&O)",              IDM_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "上に",                  IDM_PARENT
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)",              IDM_END
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "削除(&D)",              IDM_DELETE
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "旧タイプ(&0)",          IDM_OLD
+        MENUITEM "フラットタイプ(&1)",    IDM_FLAT
+        MENUITEM "透明タイプ(&3)",        IDM_TRANSPARENT
+    END
+    POPUP "オプション(&O)"
+    BEGIN
+        MENUITEM "丸(&C)",                IDM_MARU
+        MENUITEM "三角(&A)",              IDM_SANKAKU
+        MENUITEM "四角(&B)",              IDM_SHIKAKU
+    END
+END
+
+/////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+IDR_TOOLBAR1            BITMAP            "toolbar1.bmp"

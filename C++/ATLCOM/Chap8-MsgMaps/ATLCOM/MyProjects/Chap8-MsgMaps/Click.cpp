@@ -1,0 +1,10 @@
+// Click.cpp : CClick のインプリメンテーション
+
+#include "stdafx.h"
+#include "MsgMaps.h"
+#include "Click.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// CClick
+
+

@@ -1,0 +1,12 @@
+javascript:(function(){document.location.href='http://webcache.googleusercontent.com/search?q=cache:%27+escape(document.location.href)})();
+https://webcache.googleusercontent.com/search?q=cache:https%3A//www.tohoho-web.com/
+
+javascript:(function(){document.location.href='https://b.hatena.ne.jp/entry/s/%27+escape(document.location.href)})();
+https://b.hatena.ne.jp/entry/s/
+
+
+let url = document.location.href;
+url = url.replace(/^https?:\/\//i, '');
+
+This code uses a regular expression to remove the initial http:// or https:// from the URL string. The i flag makes the regular expression case-insensitive, so it will match both http and https. 
+The ^ character matches the beginning of the string, and the \/ characters escape the forward slashes in the regular expression.

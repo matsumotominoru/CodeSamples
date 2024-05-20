@@ -1,0 +1,41 @@
+// MsgMaps.idl : MsgMaps.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (MsgMaps.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(26A4A470-85A1-11D2-ABC6-0000B4725554),
+		dual,
+		helpstring("IClick Interface"),
+		pointer_default(unique)
+	]
+	interface IClick : IDispatch
+	{
+	};
+
+[
+	uuid(26A4A464-85A1-11D2-ABC6-0000B4725554),
+	version(1.0),
+	helpstring("MsgMaps 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library MSGMAPSLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(26A4A471-85A1-11D2-ABC6-0000B4725554),
+		helpstring("Click Class")
+	]
+	coclass Click
+	{
+		[default] interface IClick;
+	};
+};

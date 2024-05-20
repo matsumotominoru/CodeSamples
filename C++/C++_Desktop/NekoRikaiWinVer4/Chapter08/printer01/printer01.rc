@@ -1,0 +1,13 @@
+// printer01.rc
+#include "resource.h"
+
+MYMENU MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "印刷(&P)",        IDM_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)",        IDM_END
+    END
+END
+

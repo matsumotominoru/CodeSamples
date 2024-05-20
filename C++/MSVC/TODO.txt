@@ -1,0 +1,4 @@
+# Output To console in UTF-8.
+1. Output literal string.
+2. Output wchar_t variable.
+3. Output wstring variable.

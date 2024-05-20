@@ -1,0 +1,52 @@
+// resource.h
+
+#include <windows.h>
+#include "resource.h"
+
+//////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "終了(&X)",                     IDM_END
+    END
+    POPUP "ダイアログ(&D)"
+    BEGIN
+        MENUITEM "ダイアログボックスを出す(&O)", IDM_DLG
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYDLG DIALOGEX 0, 0, 195, 114
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "いろいろなコントロール"
+FONT 9, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    CONTROL       "男", IDC_RADIO1, "Button", BS_AUTORADIOBUTTON |
+                  WS_GROUP | WS_TABSTOP, 14, 16, 24, 10
+    CONTROL       "女", IDC_RADIO2, "Button", BS_AUTORADIOBUTTON |
+                  WS_TABSTOP, 61, 14, 24, 10
+    CONTROL       "日本", IDC_RADIO3, "Button", BS_AUTORADIOBUTTON |
+                  WS_GROUP | WS_TABSTOP, 106, 17, 32, 10
+    CONTROL       "日本以外", IDC_RADIO4, "Button",
+                  BS_AUTORADIOBUTTON | WS_TABSTOP, 138, 17, 48, 10
+    CONTROL       "20歳以上", IDC_CHECK1, "Button",
+                  BS_AUTOCHECKBOX | WS_TABSTOP, 7, 39, 48, 10
+    COMBOBOX      IDC_COMBO1, 100, 34, 58, 73,
+                  CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LISTBOX       IDC_LIST1, 100, 49, 69, 41,
+                  LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT      IDC_EDIT1, 7, 57, 76, 13, ES_AUTOHSCROLL
+    SCROLLBAR     IDC_SCROLLBAR1, 7, 78, 88, 11, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 7, 93, 50, 14
+    PUSHBUTTON    "キャンセル", IDCANCEL, 138, 93, 50, 14
+    GROUPBOX      "性別", IDC_STATIC, 7, 7, 90, 24
+    GROUPBOX      "国籍", IDC_STATIC, 100, 7, 86, 24
+END

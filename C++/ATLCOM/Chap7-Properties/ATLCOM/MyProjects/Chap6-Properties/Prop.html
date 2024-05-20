@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>ATL 3.0 test page for object Prop</TITLE>
+</HEAD>
+<BODY>
+<OBJECT ID="Prop" <
+ NAME="Obj"
+ CLASSID="CLSID:EFFA777C-841F-11D2-ABC0-0000B4725554">
+<PARAM NAME="Caption" VALUE="Caption #1">
+<PARAM NAME="String" VALUE="String #1">
+<PARAM NAME="Number" VALUE="100">
+<PARAM NAME="BackColor" VALUE="0">
+<PARAM NAME="ForeColor" VALUE="16777215">
+
+>
+</OBJECT>
+<P>
+<INPUT TYPE="BUTTON" 
+ NAME="bn" 
+ VALUE="Click me" 
+ LANGUAGE=VBS 
+ onclick="bnclick">
+<INPUT TYPE="TEXT" 
+ NAME="txtString" 
+ VALUE="">
+<SCRIPT LANGUAGE=VBS>
+Sub bnclick()
+   Obj.Number = Obj.Number + 1
+   Obj.String = txtString.Value
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

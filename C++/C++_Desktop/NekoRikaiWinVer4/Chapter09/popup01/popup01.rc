@@ -1,0 +1,13 @@
+// popup01.rc
+#include "resource.h"
+
+MYPOPUP MENU 
+BEGIN
+    POPUP "ダミーです"
+    BEGIN
+        MENUITEM "ポップアップ1",    IDM_POPUP1
+        MENUITEM "ポップアップ2",    IDM_POPUP1
+        MENUITEM SEPARATOR
+        MENUITEM "終了",             IDM_END
+    END
+END

@@ -1,0 +1,2 @@
+// bitmap01.rc
+MYBMP                   BITMAP                  "bitmap1.bmp"

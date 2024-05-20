@@ -1,0 +1,26 @@
+HKCR
+{
+	BUObject.DeveloperCollection.1 = s 'DeveloperCollection Class'
+	{
+		CLSID = s '{5B586A22-8465-11D2-ABC1-0000B4725554}'
+	}
+	BUObject.DeveloperCollection = s 'DeveloperCollection Class'
+	{
+		CLSID = s '{5B586A22-8465-11D2-ABC1-0000B4725554}'
+		CurVer = s 'BUObject.DeveloperCollection.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5B586A22-8465-11D2-ABC1-0000B4725554} = s 'DeveloperCollection Class'
+		{
+			ProgID = s 'BUObject.DeveloperCollection.1'
+			VersionIndependentProgID = s 'BUObject.DeveloperCollection'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{5B586A13-8465-11D2-ABC1-0000B4725554}'
+		}
+	}
+}

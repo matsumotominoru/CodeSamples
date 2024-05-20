@@ -1,0 +1,35 @@
+HKCR
+{
+	URLTree.URLTreeView.1 = s 'URLTreeView Class'
+	{
+		CLSID = s '{26A4A47F-85A1-11D2-ABC6-0000B4725554}'
+		'Insertable'
+	}
+	URLTree.URLTreeView = s 'URLTreeView Class'
+	{
+		CLSID = s '{26A4A47F-85A1-11D2-ABC6-0000B4725554}'
+		CurVer = s 'URLTree.URLTreeView.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {26A4A47F-85A1-11D2-ABC6-0000B4725554} = s 'URLTreeView Class'
+		{
+			ProgID = s 'URLTree.URLTreeView.1'
+			VersionIndependentProgID = s 'URLTree.URLTreeView'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{26A4A472-85A1-11D2-ABC6-0000B4725554}'
+			'Version' = s '1.0'
+		}
+	}
+}

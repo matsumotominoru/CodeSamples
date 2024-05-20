@@ -1,0 +1,52 @@
+// EventWatcher.idl : EventWatcher.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (EventWatcher.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(C738A231-76D4-11D2-AB94-0000B4725554),
+	
+		helpstring("IEvents Interface"),
+		pointer_default(unique)
+	]
+	interface IEvents : IUnknown
+	{
+		[helpstring("ﾒｿｯﾄﾞ WatchEvent")] HRESULT WatchEvent([in,string] wchar_t* strEventName);
+		[helpstring("ﾒｿｯﾄﾞ SetInterval")] HRESULT SetInterval([in] LONG lInterval);
+	};
+
+[
+	uuid(C738A224-76D4-11D2-AB94-0000B4725554),
+	version(1.0),
+	helpstring("EventWatcher 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library EVENTWATCHERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	importlib("..\EventCtrl\EventCtrl.tlb");
+
+	[
+		uuid(C738A233-76D4-11D2-AB94-0000B4725554),
+		helpstring("_IEventsEvents Interface")
+	]
+	dispinterface _IEventsEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(C738A232-76D4-11D2-AB94-0000B4725554),
+		helpstring("Events Class")
+	]
+	coclass Events
+	{
+		[default] interface IEvents;
+		[default, source] dispinterface _IEventsEvents;
+	};
+};

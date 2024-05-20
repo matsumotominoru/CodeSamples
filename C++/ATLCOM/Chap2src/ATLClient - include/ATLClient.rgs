@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{B0C2654C-6A4F-11D2-AB79-0000B4725554} = s 'ATLClient'
+		'ATLClient.EXE'
+		{
+			val AppID = s {B0C2654C-6A4F-11D2-AB79-0000B4725554}
+		}
+	}
+}

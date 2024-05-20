@@ -1,0 +1,39 @@
+// wclient.rc
+
+#include <windows.h>
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYCLIENT DIALOGEX 0, 0, 171, 273
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP |
+    WS_CAPTION | WS_SYSMENU
+CAPTION "猫でもわかるクライアント"
+FONT 10, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    EDITTEXT                    IDC_PORT, 74, 7, 49, 12,
+                                    ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT                    IDC_SERVER, 74, 25, 74, 12,
+                                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON "接続",       IDC_START, 130, 7, 34, 13
+    EDITTEXT                    IDC_INFO, 7, 60, 157, 88,
+                                    ES_MULTILINE | ES_AUTOVSCROLL |
+                                    ES_READONLY | WS_VSCROLL
+    EDITTEXT                    IDC_SEND, 7, 177, 157, 53,
+                                    ES_MULTILINE | ES_AUTOVSCROLL |
+                                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON    "終了",       IDOK, 126, 252, 38, 14
+    LTEXT         "ポート",     IDC_STATIC, 14, 7, 36, 8
+    LTEXT         "サーバ",     IDC_STATIC, 14, 27, 33, 8
+    LTEXT         "メッセージ", IDC_STATIC, 7, 46, 42, 12
+    LTEXT         "送信",       IDC_STATIC, 7, 159, 29, 12
+    PUSHBUTTON    "送信",       IDC_SENDBTN, 7, 234, 58, 32
+END
+
+/////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+MYICON    ICON    "icon1.ico"

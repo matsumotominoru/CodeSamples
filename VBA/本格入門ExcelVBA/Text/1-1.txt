@@ -1,0 +1,24 @@
+Sub 文字の入力()
+'
+' Macro1 Macro
+'
+
+'
+    Range("B3").Select
+    ActiveCell.FormulaR1C1 = "マクロをマスター"
+    Range("B3").Select
+    With Selection.Font
+        .Name = "ＭＳ ゴシック"
+        .FontStyle = "太字"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontNone
+    End With
+End Sub

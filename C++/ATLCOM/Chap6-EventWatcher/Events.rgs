@@ -1,0 +1,23 @@
+HKCR
+{
+	Events.Events.1 = s 'Events Class'
+	{
+		CLSID = s '{C738A232-76D4-11D2-AB94-0000B4725554}'
+	}
+	Events.Events = s 'Events Class'
+	{
+		CLSID = s '{C738A232-76D4-11D2-AB94-0000B4725554}'
+		CurVer = s 'Events.Events.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C738A232-76D4-11D2-AB94-0000B4725554} = s 'Events Class'
+		{
+			ProgID = s 'Events.Events.1'
+			VersionIndependentProgID = s 'Events.Events'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{C738A225-76D4-11D2-AB94-0000B4725554}'
+			'TypeLib' = s '{C738A224-76D4-11D2-AB94-0000B4725554}'
+		}
+	}
+}

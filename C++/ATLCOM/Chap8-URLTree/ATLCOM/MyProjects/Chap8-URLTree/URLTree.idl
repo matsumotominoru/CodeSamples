@@ -1,0 +1,52 @@
+// URLTree.idl : URLTree.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (URLTree.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(26A4A47E-85A1-11D2-ABC6-0000B4725554),
+		dual,
+		helpstring("IURLTreeView Interface"),
+		pointer_default(unique)
+	]
+	interface IURLTreeView : IDispatch
+	{
+		[propget, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ URLs")] HRESULT URLs([out, retval] VARIANT *pVal);
+		[propput, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ URLs")] HRESULT URLs([in] VARIANT newVal);
+	};
+
+[
+	uuid(26A4A472-85A1-11D2-ABC6-0000B4725554),
+	version(1.0),
+	helpstring("URLTree 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library URLTREELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(26A4A47F-85A1-11D2-ABC6-0000B4725554),
+		helpstring("URLTreeView Class")
+	]
+	coclass URLTreeView
+	{
+		[default] interface IURLTreeView;
+	};
+
+	[
+		uuid(7FD41ADD-85F8-11D2-ABC7-0000B4725554),
+		helpstring("URLPage Class")
+	]
+	coclass URLPage
+	{
+		interface IUnknown;
+	};
+};

@@ -1,0 +1,25 @@
+// bitmap02.rc
+#include "resource.h"
+
+//////////////////////////////////////////////////////////////////
+// Menu
+//
+MYMENU MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "終了(&X)",	IDM_END
+    END
+    POPUP "オプション(&O)"
+    BEGIN
+        MENUITEM "猫1(&1)",	IDM_CAT1
+        MENUITEM "猫2(&2)",	IDM_CAT2
+    END
+END
+
+//////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+MYBMP1       BITMAP        "bitmap1.bmp"
+MYBMP2       BITMAP        "bitmap2.bmp"

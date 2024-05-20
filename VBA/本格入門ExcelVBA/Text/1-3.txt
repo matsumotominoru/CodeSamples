@@ -1,0 +1,54 @@
+
+'--------------------------
+'セルの背景色を変更するマクロ
+'--------------------------
+Sub 色の変更()
+    Range("A1:B5").Select           'セルの選択
+    With Selection.Interior         '背景色の設定
+        .ColorIndex = 6
+        .Pattern = xlSolid
+    End With
+End Sub
+
+
+'----------------------------
+'セルのデータをコピーするマクロ
+'----------------------------
+Sub データのコピー()
+    Range("A1:A5").Select           'セルの選択
+    Selection.Copy                  '選択範囲のコピー
+    Range("B1:B5").Select           'セルの選択
+    ActiveSheet.Paste               '選択先に貼り付け
+    Application.CutCopyMode = False 'コピーの解除
+End Sub
+
+'---------------------
+'セルに罫線を引くマクロ
+'---------------------
+Sub 罫線描画()
+    Range("A1:D10").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = xlAutomatic
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = xlAutomatic
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = xlAutomatic
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+        .ColorIndex = xlAutomatic
+    End With
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+End Sub

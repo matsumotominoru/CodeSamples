@@ -1,0 +1,48 @@
+// dialog02.rc
+
+#include <windows.h>
+#include "resource.h"
+
+//////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYDLG DIALOGEX 0, 0, 182, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP |
+    WS_CAPTION | WS_SYSMENU
+CAPTION "モードレスダイアログボックス"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1, 21, 22, 139, 16, ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK", IDOK, 7, 42, 50, 14
+    PUSHBUTTON      "クリア", IDCANCEL, 63, 42, 50, 14
+    PUSHBUTTON      "閉じる", IDC_CLOSE, 119, 42, 50, 14
+    LTEXT           "氏名を入力してください", IDC_STATIC, 23, 7, 73, 8
+END
+
+//////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "終了(&X)",                    IDM_END
+    END
+    POPUP "オプション(&O)"
+    BEGIN
+        MENUITEM "ダイアログを開く(&D)\tF5",    IDM_DLG
+        MENUITEM "ダイアログを閉じる(&C)\tF6",  IDM_CLOSEDLG
+    END
+END
+
+//////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+MYACCEL ACCELERATORS
+BEGIN
+    VK_F5,          IDM_DLG,                VIRTKEY, NOINVERT
+    VK_F6,          IDM_CLOSEDLG,           VIRTKEY, NOINVERT
+END

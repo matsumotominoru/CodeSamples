@@ -1,0 +1,26 @@
+HKCR
+{
+	BUObject.BusinessUnit.1 = s 'BusinessUnit Class'
+	{
+		CLSID = s '{5B586A24-8465-11D2-ABC1-0000B4725554}'
+	}
+	BUObject.BusinessUnit = s 'BusinessUnit Class'
+	{
+		CLSID = s '{5B586A24-8465-11D2-ABC1-0000B4725554}'
+		CurVer = s 'BUObject.BusinessUnit.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5B586A24-8465-11D2-ABC1-0000B4725554} = s 'BusinessUnit Class'
+		{
+			ProgID = s 'BUObject.BusinessUnit.1'
+			VersionIndependentProgID = s 'BUObject.BusinessUnit'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{5B586A13-8465-11D2-ABC1-0000B4725554}'
+		}
+	}
+}

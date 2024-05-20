@@ -1,0 +1,23 @@
+HKCR
+{
+	URLTree.URLPage.1 = s 'URLPage Class'
+	{
+		CLSID = s '{7FD41ADD-85F8-11D2-ABC7-0000B4725554}'
+	}
+	URLTree.URLPage = s 'URLPage Class'
+	{
+		CLSID = s '{7FD41ADD-85F8-11D2-ABC7-0000B4725554}'
+		CurVer = s 'URLTree.URLPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7FD41ADD-85F8-11D2-ABC7-0000B4725554} = s 'URLPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

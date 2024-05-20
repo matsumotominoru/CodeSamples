@@ -1,0 +1,45 @@
+// ComDialogProject.idl : ComDialogProject.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (ComDialogProject.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[														// ..ADD
+	uuid(624235B3-64CB-11D1-A159-64D6F8C00000),			// ..ADD
+	oleautomation,										// ..ADD
+	pointer_default(unique),							// ..ADD
+	helpstring("IComDialog interface")					// ..ADD
+]
+
+interface IComDialog : IUnknown							// ..ADD
+{														// ..ADD
+	[propget, helpstring("property Visible")]			// ..ADD
+	 HRESULT Visible([out, retval] VARIANT_BOOL *pbVisible); // ..ADD
+	[propput, helpstring("property Visible")]			// ..ADD
+	 HRESULT Visible([in] VARIANT_BOOL bVisible);		// ..ADD
+};														// ..ADD
+
+
+[
+	uuid(4C061FE3-64D0-11D1-A159-64D6F8C00000),
+	version(1.0),
+	helpstring("ComDialogProject 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library COMDIALOGPROJECTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[													// ..ADD
+		uuid(D55039F0-61B3-11D1-B28D-00A0C94515AD),		// ..ADD
+		helpstring("ComDialog class")					// ..ADD
+	]													// ..ADD
+	coclass ComDialog									// ..ADD
+	{													// ..ADD
+		[default] interface IComDialog;					// ..ADD
+	};													// ..ADD
+};

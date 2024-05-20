@@ -1,0 +1,18 @@
+■システムメニューの新規項目追加手順
+(1)16の倍数かつ61440未満の値であるシステムメニューID、IDM_TESTをresource.hに追加して、ダイアログのcppファイルの①において以下を追加。
+ASSERT((IDM_TEST & 0xFFF0) == IDM_TEST);
+ASSERT(IDM_TEST < 0xF000);
+
+(2)ダイアログのcppファイルの②において以下を追加。
+pSysMenu->AppendMenu(MF_SEPARATOR);
+pSysMenu->AppendMenu(MF_STRING, IDM_TEST, [システムメニューの項目名]);
+
+(3)ダイアログのcppファイルの③において以下を追加して項目を選択したときの処理を記述する。
+else if ((nID & 0xFFF0) == IDM_TEST) {
+//システムメニューの項目を押したときの処理を記述
+}
+
+(4)リソースのStringTableにIDをIDS_TESTとして追加した場合、これを読み込む以下のコードをダイアログのcppファイルの④に追加する。この読み取った文字列は(2)の[システムメニューの項目名]に入れる。
+CString strAboutMenu_3;
+bNameValid = strAboutMenu_3.LoadString(IDS_TEST);
+ASSERT(bNameValid);

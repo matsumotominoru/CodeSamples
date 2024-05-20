@@ -1,0 +1,39 @@
+TITLE
+ アセンブリ対象cppファイル
+ 
+.686P
+ プロセッサの指定(x86)
+
+.XMM
+ ?
+
+include listing.inc
+ listing.incを含める
+
+.model	flat
+ メモリモデルと呼び出し規約
+
+INCLUDELIB OLDNAMES
+ ?
+
+EXTRN
+ 外部関数
+
+__security_check_cookie
+ 関数のBORチェックに用いる。コンパイラが自動で付与
+
+PUBLIC	_main
+ main関数
+
+_TEXT	SEGMENT
+_TEXT	ENDS
+ ?
+
+_main	PROC
+_main	ENDP
+ main関数の処理を記述
+
+○レジスタ
+ebp ベースポインタ、メモリの開始位置？データ部の開始位置
+esp スタックポインタ、スタックの開始位置
+eax スタックの一番目の値、32bit

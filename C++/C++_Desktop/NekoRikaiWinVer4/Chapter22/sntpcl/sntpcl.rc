@@ -1,0 +1,29 @@
+// sntpcl.rc
+
+#include <windows.h>
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYDLG DIALOGEX 0, 0, 200, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP |
+    WS_CAPTION | WS_SYSMENU
+CAPTION "猫でもわかる時刻合わせ"
+FONT 9, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    EDITTEXT      IDC_SERVER, 81, 7, 112, 12, ES_AUTOHSCROLL
+    EDITTEXT      IDC_SPORT, 81, 32, 112, 12, ES_AUTOHSCROLL
+    EDITTEXT      IDC_PORT, 81, 57, 112, 12,
+                      ES_AUTOHSCROLL | ES_NUMBER
+
+    DEFPUSHBUTTON "時刻を合わせる", IDOK,        7, 106,  80, 14
+    PUSHBUTTON    "終了",           IDCANCEL,  143, 106,  50, 14
+    LTEXT         "サーバ",         IDC_STATIC,  7,   7,  40,  9
+    LTEXT         "受信ポート",     IDC_STATIC,  7,  57,  40, 12
+    LTEXT         "サーバポート",   IDC_STATIC,  7,  31,  56, 13
+    LTEXT         "スタティック",   IDC_MYTIME, 81,  82, 112, 11,
+                                        SS_SUNKEN
+    LTEXT         "パソコンの時刻", IDC_STATIC,  7,  83,  62, 12
+END

@@ -1,0 +1,14 @@
+メソッド名	戻り値の型	クラス	使用しているプロジェクト	説明
+GetDlgItem(int nID)	Cwnd*	CWnd	MFCDlg_TakebashiQ_1	リソースのコントロールIDからポインタを取得する。
+SetWindowText(LPCTSTR lpszString)	void	CMFCMaskedEdit	MFCDlg_TakebashiQ_1	コントロールにテキストあるいはキャプションを設定する。
+EnableWindow(BOOL bEnable = TRUE)	BOOL	CWnd	MFCDlg_TakebashiQ_1	コントロールをDisableまたはEnableにする。
+GetWindowText(CString& rString)	void	CWnd	MFCDlg_TakebashiQ_1	コントロールからテキストまたはキャプションを取得する。
+ASSERT(booleanExpression)		Macro	MFCDlg_0	0のときエラーメッセージを出してプログラムを停止する。0でないときは何もしない。
+GetSystemMenu(BOOL bRevert)	CMenu*	CWnd	MFCDlg_0	システムメニューを取得する。
+LoadString(UINT nID)	BOOL	CStringT	MFCDlg_0	リソースのString Tableの項目を読み取る。
+IsEmpty()	BOOL	CDockingPanesRow	MFCDlg_0	文字列の場合は、空文字かどうか判定する。
+AppendMenu(UINT nFlags,UINT_PTR nIDNewItem = 0,LPCTSTR lpszNewItem = NULL)	BOOL	CMenu	MFCDlg_0	第一引数は追加する項目の種類、第二引数はシステムメニュー項目ID、第三引数は文字列。メニューに新規項目を追加する。
+Format(PCXSTR pszFormat,[, argument]...)	void __cdecl	CStringT	MFCDlg_0	文字列の書式設定を行う。
+DoModal()	INT_PTR	CDialog	MFCDlg_0	戻り値は終了直前に押したボタンのID？モーダルウィンドウでダイアログを生成する。
+AfxMessageBox(LPCTSTR lpszText,UINT nType = MB_OK,UINT nIDHelp = 0)	int	Macro	MFCDlg_0	メッセージボックスを表示する。
+

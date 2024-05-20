@@ -1,0 +1,26 @@
+HKCR
+{
+	Wrox.CalcEaster.1 = s 'CalcEaster Class'
+	{
+		CLSID = s '{B0C2654A-6A4F-11D2-AB79-0000B4725554}'
+	}
+	Wrox.CalcEaster = s 'CalcEaster Class'
+	{
+		CLSID = s '{B0C2654A-6A4F-11D2-AB79-0000B4725554}'
+		CurVer = s 'Wrox.CalcEaster.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B0C2654A-6A4F-11D2-AB79-0000B4725554} = s 'CalcEaster Class'
+		{
+			ProgID = s 'Wrox.CalcEaster.1'
+			VersionIndependentProgID = s 'Wrox.CalcEaster'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B0C2653D-6A4F-11D2-AB79-0000B4725554}'
+		}
+	}
+}

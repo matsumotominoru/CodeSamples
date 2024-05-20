@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{4C061FE4-64D0-11D1-A159-64D6F8C00000} = s 'ComDialogProject'
+		'ComDialogProject.EXE'
+		{
+			val AppID = s {4C061FE4-64D0-11D1-A159-64D6F8C00000}
+		}
+	}
+}

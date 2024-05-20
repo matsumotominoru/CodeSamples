@@ -1,0 +1,2 @@
+﻿type="book"
+name="スラスラわかるJavaScript"

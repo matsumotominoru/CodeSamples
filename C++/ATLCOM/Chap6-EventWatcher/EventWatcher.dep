@@ -1,0 +1,27 @@
+# Microsoft Developer Studio Generated Dependency File, included by EventWatcher.mak
+
+.\Events.cpp : \
+	"..\eventctrl\debug\eventctrl.dll"\
+	".\EventCtrlCP.h"\
+	".\Events.h"\
+	".\EventWatcher.h"\
+	
+
+.\EventWatcher.cpp : \
+	"..\eventctrl\debug\eventctrl.dll"\
+	".\EventCtrlCP.h"\
+	".\Events.h"\
+	".\EventWatcher.h"\
+	".\EventWatcher_i.c"\
+	
+
+.\EventWatcher.rc : \
+	".\Events.rgs"\
+	".\EventWatcher.rgs"\
+	".\EventWatcher.tlb"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	

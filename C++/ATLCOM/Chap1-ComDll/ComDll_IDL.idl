@@ -1,0 +1,34 @@
+// ComDLL_IDL.idl
+
+import "oaidl.idl";
+
+	[ object,
+	  uuid(FEB89321-6D77-11d1-B28D-00A0C94515AD) ]
+	interface IWroxInterface : IUnknown
+	{
+		HRESULT Alert();
+	};
+
+	[ object,
+	  uuid(FEB89322-6D77-11d1-B28D-00A0C94515AD) ]
+	interface IWroxSimple : IUnknown
+	{
+		HRESULT Display();
+	};
+
+[
+	uuid(FEB89323-6D77-11d1-B28D-00A0C94515AD),
+	version(1.0)
+]
+library WroxComponentLib
+{
+	importlib("stdole32.tlb");
+
+	[ uuid(FEB89324-6D77-11d1-B28D-00A0C94515AD) ]
+	coclass WroxComponent
+	{
+		[default] interface IWroxInterface;
+		interface IWroxSimple;
+	};
+};
+

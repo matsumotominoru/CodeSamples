@@ -1,0 +1,22 @@
+〇作業手順
+　①Developer Command Prompt for VS 2019を起動
+　②作業ディレクトリC:\Users\松本　稔\Documents\Visual Studio 2019\Project\C++_Console\VC++Compileに移動
+　③コンパイルするcppファイルを作業ディレクトリに移動
+　④以下のコマンドを実行するとobjファイルとexeファイルが生成される。
+　/W3・・・レベル3の警告
+cl /W3 /EHsc xxx.cpp
+
+〇注意
+　cppファイルの文字コードはUTF8BOMつきとする。
+　64ビットプログラムを作成したい場合はx64 Native Tools Command Prompt for VS 2019を使う。
+　printfはprintf_sに修正する(一つ目だけでよい)
+
+〇参考
+　明快入門Visual C++ 2008,林晴比古,p578-579
+　
+　・マイクロソフト公式ページ
+　https://docs.microsoft.com/ja-jp/cpp/build/walkthrough-compile-a-c-program-on-the-command-line?view=vs-2019
+　
+　developerToolForVS2019のショートカットは以下の通り：
+%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
+　VsDevCmd.batが実行される。

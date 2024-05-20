@@ -1,0 +1,2 @@
+// playsound02.rc
+MYWAVE        WAVE        "sound1.wav"

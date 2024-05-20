@@ -1,0 +1,69 @@
+
+'-------------------
+'事例8
+'単一のセルを選択する
+'-------------------
+
+Sub RangeSel1()
+    Range("C3").Select
+End Sub
+ 
+ 
+'-------------------------
+'事例9
+'連続するセル範囲を選択する
+'-------------------------
+
+Sub RangeSel2()
+    Range("B2:C5").Select
+    'Range("B2", "C5").Select
+End Sub
+
+
+'-------------------------
+'事例10
+'非連続のセル範囲を選択する
+'-------------------------
+
+Sub RangeSel3()
+    MsgBox "セルB2,B4,D2,D4を選択します"
+    Range("B2,B4,D2,D4").Select
+
+    MsgBox "セルB6:D7とB9:D10を選択します"
+    Range("B6:D7,B9:D10").Select
+End Sub
+
+
+'----------------------------
+'事例11
+'名前が定義されたセルを選択する
+'----------------------------
+  
+Sub RangeSel4()
+    Range("売上合計").Select
+End Sub
+
+
+'-------------------
+'事例12
+'行､列全体を選択する
+'-------------------
+  
+Sub RangeSel5()
+    Range("1:1").Select
+    'Range("A:A").Select
+    'Range("1:3").Select
+    'Range("A:C").Select
+    'Range("1:3,6:6").Select
+    'Range("A:C,F:F").Select
+End Sub
+
+
+'-------------------------------
+'事例13
+'Cellsで全セルを選択する
+'-------------------------------
+  
+Sub CellsSel()
+    Cells.Select
+End Sub

@@ -1,0 +1,4 @@
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    
+.NET Framework v4.5.2

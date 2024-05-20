@@ -1,0 +1,3 @@
+■DirectX
+　○DirectX2010Include
+　　$(DXSDK_DIR)include\

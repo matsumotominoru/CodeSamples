@@ -1,0 +1,65 @@
+// ReturningAnObject.idl : ReturningAnObject.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (ReturningAnObject.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+interface	IMainObject;
+interface	ISeparateObject;
+
+	[
+		object,
+		uuid(35494FBF-6E15-11D2-AB83-0000B4725554),
+		dual,
+		helpstring("IMainObject Interface"),
+		pointer_default(unique)
+	]
+	interface IMainObject : IDispatch
+	{
+		[id(1), helpstring("ﾒｿｯﾄﾞ Display")] HRESULT Display();
+		[id(2), helpstring("ﾒｿｯﾄﾞ CreateSeparateObject")] HRESULT CreateSeparateObject([out,retval] ISeparateObject** ppSep);
+		[id(3), helpstring("ﾒｿｯﾄﾞ CreateAndInitializeSeparateObject")] HRESULT CreateAndInitializeSeparateObject([out, retval] ISeparateObject** ppSep);
+	};
+	[
+		object,
+		uuid(35494FC3-6E15-11D2-AB83-0000B4725554),
+		dual,
+		helpstring("ISeparateObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISeparateObject : IDispatch
+	{
+		[id(1), helpstring("ﾒｿｯﾄﾞ Display")] HRESULT Display();
+	};
+
+[
+	uuid(35494FB3-6E15-11D2-AB83-0000B4725554),
+	version(1.0),
+	helpstring("ReturningAnObject 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library RETURNINGANOBJECTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(35494FC2-6E15-11D2-AB83-0000B4725554),
+		helpstring("MainObject Class")
+	]
+	coclass MainObject
+	{
+		[default] interface IMainObject;
+	};
+/*
+	[
+		uuid(35494FC4-6E15-11D2-AB83-0000B4725554),
+		helpstring("SeparateObject Class")
+	]
+	coclass SeparateObject
+	{
+		[default] interface ISeparateObject;
+	};
+*/
+};

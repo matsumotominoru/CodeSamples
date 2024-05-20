@@ -1,0 +1,36 @@
+// wserver.rc
+
+#include <windows.h>
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYSERVER DIALOGEX 0, 0, 186, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP |
+    WS_CAPTION | WS_SYSMENU
+CAPTION "猫でもわかるTCPサーバ"
+FONT 9, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    EDITTEXT                    IDC_PORT, 43, 7, 76, 15,
+                                    ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON "開始",       IDC_START, 127, 7, 52, 15
+    EDITTEXT                    IDC_INFO, 7, 60, 172, 71, ES_MULTILINE |
+                                    ES_AUTOVSCROLL | ES_READONLY |
+                                    ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT                    IDC_SEND, 7, 158, 172, 62,
+                                    ES_MULTILINE | ES_AUTOVSCROLL |
+                                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON    "送信",       IDC_SENDBTN,   7, 225, 73, 24
+    PUSHBUTTON    "終了",       IDOK,        150, 236, 29, 14
+    LTEXT         "ポート",     IDC_STATIC,    7,   7, 30, 12
+    LTEXT         "メッセージ", IDC_STATIC,   14,  45, 41,  8
+    LTEXT         "送信文",     IDC_STATIC,    7, 139, 25,  8
+END
+
+/////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+MYICON    ICON    "icon1.ico"

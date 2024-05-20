@@ -1,0 +1,34 @@
+// menu02.rc
+#include "resource.h"
+
+//////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "終了(&X)",                         IDM_END
+    END
+    POPUP "オプション(&O)"
+    BEGIN
+        MENUITEM "オプション(&1)\tShift + Ctrl + 1", IDM_OPT1
+        MENUITEM "オプション(&2)\tShift + Ctrl + 2", IDM_OPT2
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "About(&A)\tCtrl+A",                IDM_ABOUT
+    END
+END
+
+//////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+MYACCEL ACCELERATORS
+BEGIN
+    "A",    IDM_ABOUT,    VIRTKEY,        CONTROL, NOINVERT
+    "1",    IDM_OPT1,     VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "2",    IDM_OPT2,     VIRTKEY, SHIFT, CONTROL, NOINVERT
+END

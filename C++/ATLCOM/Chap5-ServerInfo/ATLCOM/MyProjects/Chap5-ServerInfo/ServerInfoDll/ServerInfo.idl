@@ -1,0 +1,39 @@
+// ServerInfo.idl : ServerInfo.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (ServerInfo.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(C3C5B42C-7482-11D2-AB8F-0000B4725554),
+	
+		helpstring("IDiskInfo Interface"),
+		pointer_default(unique)
+	]
+	interface IDiskInfo : IUnknown
+	{
+		[helpstring("ﾒｿｯﾄﾞ GetFreeDiskSpace")] HRESULT GetFreeDiskSpace([in,string] const wchar_t* wszDrive,[out] hyper* hypFreeBytes);
+	};
+
+[
+	uuid(C3C5B41F-7482-11D2-AB8F-0000B4725554),
+	version(1.0),
+	helpstring("ServerInfo 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library SERVERINFOLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(795CF252-7454-11D2-AB8F-0000B4725554),
+		helpstring("DiskInfo Class")
+	]
+	coclass DiskInfo
+	{
+		[default] interface IDiskInfo;
+	};
+};

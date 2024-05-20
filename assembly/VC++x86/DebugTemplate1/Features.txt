@@ -1,0 +1,3 @@
+32ビットアセンブリ(MASM)プロジェクトのテンプレート。
+
+参考:assembly-language-for-x86-processors-7th-edition.pdf

@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toolbar02", "toolbar02.vcxproj", "{6AB8ADAD-33C2-4A9B-8F42-5EC7940099CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AB8ADAD-33C2-4A9B-8F42-5EC7940099CD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AB8ADAD-33C2-4A9B-8F42-5EC7940099CD}.Debug|Win32.Build.0 = Debug|Win32
+		{6AB8ADAD-33C2-4A9B-8F42-5EC7940099CD}.Release|Win32.ActiveCfg = Release|Win32
+		{6AB8ADAD-33C2-4A9B-8F42-5EC7940099CD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

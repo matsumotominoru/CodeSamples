@@ -1,0 +1,26 @@
+HKCR
+{
+	Properties.PropObj.1 = s 'PropObj Class'
+	{
+		CLSID = s '{EFFA777E-841F-11D2-ABC0-0000B4725554}'
+	}
+	Properties.PropObj = s 'PropObj Class'
+	{
+		CLSID = s '{EFFA777E-841F-11D2-ABC0-0000B4725554}'
+		CurVer = s 'Properties.PropObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EFFA777E-841F-11D2-ABC0-0000B4725554} = s 'PropObj Class'
+		{
+			ProgID = s 'Properties.PropObj.1'
+			VersionIndependentProgID = s 'Properties.PropObj'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EFFA776D-841F-11D2-ABC0-0000B4725554}'
+		}
+	}
+}

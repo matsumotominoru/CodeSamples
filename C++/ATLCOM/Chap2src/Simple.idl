@@ -1,0 +1,43 @@
+// Simple.idl : Simple.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (Simple.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(B0C26549-6A4F-11D2-AB79-0000B4725554),
+		dual,
+		helpstring("ICalcEaster Interface"),
+		pointer_default(unique)
+	]
+	interface ICalcEaster : IDispatch
+	{
+		[propget, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Year")] HRESULT Year([out, retval] short *pVal);
+		[propput, id(1), helpstring("ﾌﾟﾛﾊﾟﾃｨ Year")] HRESULT Year([in] short newVal);
+		[propget, id(2), helpstring("ﾌﾟﾛﾊﾟﾃｨ Month")] HRESULT Month([out, retval] short *pVal);
+		[propget, id(3), helpstring("ﾌﾟﾛﾊﾟﾃｨ Day")] HRESULT Day([out, retval] short *pVal);
+		[id(4), helpstring("ﾒｿｯﾄﾞ CalculateEaster")] HRESULT CalculateEaster();
+	};
+
+[
+	uuid(B0C2653D-6A4F-11D2-AB79-0000B4725554),
+	version(1.0),
+	helpstring("Simple 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library SIMPLELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(B0C2654A-6A4F-11D2-AB79-0000B4725554),
+		helpstring("CalcEaster Class")
+	]
+	coclass CalcEaster
+	{
+		[default] interface ICalcEaster;
+	};
+};

@@ -1,0 +1,42 @@
+
+'------------------------------------------
+'事例4
+'印刷プレビューを表示する
+'------------------------------------------
+
+Sub 印刷プレビューを表示する()
+    Worksheets("売上台帳").PrintPreview
+End Sub
+
+
+'---------------------
+'事例5
+'ワークシートを削除する
+'---------------------
+
+Sub シートの削除()
+    Application.DisplayAlerts = False
+    Worksheets("入金台帳").Delete
+    Application.DisplayAlerts = True
+End Sub
+
+
+'------------------------
+'事例6
+'ワークシートを非表示にする
+'------------------------
+
+Sub シートの非表示()
+    '［再表示」コマンドが使用できなくなる
+    Worksheets("Sheet2").Visible = xlSheetVeryHidden
+End Sub
+
+
+'-----------------------
+'事例7
+'ワークシートを再表示する
+'-----------------------
+
+Sub シートの再表示()
+    Worksheets("Sheet2").Visible = xlSheetVisible
+End Sub

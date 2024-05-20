@@ -1,0 +1,10 @@
+1.Go to working directory and enable dependency tracking for your code as following:
+go mod init example.com/hello
+
+2.Write your code.
+
+3.If necessary, add new module requirements and sums to use external package.
+go mod tidy
+
+4.Run your code.
+go run .

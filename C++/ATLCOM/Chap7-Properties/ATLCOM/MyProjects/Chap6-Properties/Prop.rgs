@@ -1,0 +1,35 @@
+HKCR
+{
+	Properties.Prop.1 = s 'Prop Class'
+	{
+		CLSID = s '{EFFA777C-841F-11D2-ABC0-0000B4725554}'
+		'Insertable'
+	}
+	Properties.Prop = s 'Prop Class'
+	{
+		CLSID = s '{EFFA777C-841F-11D2-ABC0-0000B4725554}'
+		CurVer = s 'Properties.Prop.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EFFA777C-841F-11D2-ABC0-0000B4725554} = s 'Prop Class'
+		{
+			ProgID = s 'Properties.Prop.1'
+			VersionIndependentProgID = s 'Properties.Prop'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{EFFA776D-841F-11D2-ABC0-0000B4725554}'
+			'Version' = s '1.0'
+		}
+	}
+}

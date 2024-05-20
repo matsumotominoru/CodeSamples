@@ -1,0 +1,2 @@
+MSBuild WindowsAPI32.sln /t:clean
+MSBuild WindowsAPI32.sln /t:build /p:Configuration=Release;Platform="x86"

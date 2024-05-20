@@ -1,0 +1,20 @@
+■VSCodeでjava
+文字コードの問題：
+VSCodeはUTF-8で開くが、cmdの文字コードはShiftJISなのでそのままjavac,javaすると文字化けする。
+→cmdをUTF8で開いてjavac,javaを行う。VSCodeはただのエディター。
+
+
+■Path
+C:\Program Files\OpenJDK\jdk-16\bin
+PATH C:\Program Files\OpenJDK\jdk-16\bin;%PATH%
+javac
+java
+
+■oldPath
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+OracleのJava
+PATH C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%PATH%
+
+C:\Program Files\jdk-12.0.1\bin
+jdkのjava
+PATH C:\Program Files\jdk-12.0.1\bin;%PATH%

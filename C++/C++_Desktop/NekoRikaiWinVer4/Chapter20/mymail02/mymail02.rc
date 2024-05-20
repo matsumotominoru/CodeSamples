@@ -1,0 +1,63 @@
+// mymail02.rc
+
+#include <windows.h>
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+MYMENU MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "メールチェック(&C)...",       IDM_CHECK
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)...",                 IDM_END
+    END
+    POPUP "オプション(&O)"
+    BEGIN
+        MENUITEM "設定(&S)...",                 IDM_SETTING
+    END
+END
+
+/////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+MYDLG DIALOGEX 0, 0, 160, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "設定"
+FONT 12, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    EDITTEXT        IDC_POP3, 81,  7, 72, 12, ES_AUTOHSCROLL
+    EDITTEXT        IDC_ID,   81, 25, 72, 12, ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASS, 81, 43, 72, 12, ES_PASSWORD |
+                                              ES_AUTOHSCROLL
+    EDITTEXT        IDC_PORT, 81, 61, 72, 12, ES_AUTOHSCROLL
+    EDITTEXT        IDC_MIN,  81, 82, 46, 12, ES_AUTOHSCROLL
+    CONTROL         "", IDC_SPIN1, "msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY,
+                    120, 82, 8, 9
+    DEFPUSHBUTTON   "OK",               IDOK,       7, 101, 50, 14
+    PUSHBUTTON      "キャンセル",       IDCANCEL, 103, 101, 50, 14
+    LTEXT           "POP3サーバ",       IDC_STATIC, 7,   7, 49,  8
+    LTEXT           "ユーザーID",       IDC_STATIC, 7,  26, 51,  8
+    LTEXT           "パスワード",       IDC_STATIC, 7,  45, 49,  8
+    LTEXT           "ポート",           IDC_STATIC, 7,  64, 48,  8
+    LTEXT           "チェック間隔(分)", IDC_STATIC, 7,  82, 68,  8
+END
+
+MAINDLG DIALOGEX 0, 0, 147, 92
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP |
+      WS_CAPTION | WS_SYSMENU
+CAPTION "メールチェッカー"
+FONT 9, "ＭＳ ゴシック", 400, 0, 0x80
+BEGIN
+    PUSHBUTTON      "スタート",     IDC_START,   7,  7,  63, 25
+    PUSHBUTTON      "オプション",   IDC_OPTION, 75,  7,  63, 25
+    DEFPUSHBUTTON   "終了",         IDOK,       75, 38,  63, 25
+    EDITTEXT                        IDC_INFO,    7, 65, 133, 20,
+                                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "チェック中止", IDC_STOP,    7, 38,  63, 25
+END

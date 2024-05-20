@@ -1,0 +1,26 @@
+HKCR
+{
+	Colors.ColorObject.1 = s 'ColorObject Class'
+	{
+		CLSID = s '{75B0CC62-732F-11D2-AB88-0000B4725554}'
+	}
+	Colors.ColorObject = s 'ColorObject Class'
+	{
+		CLSID = s '{75B0CC62-732F-11D2-AB88-0000B4725554}'
+		CurVer = s 'Colors.ColorObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {75B0CC62-732F-11D2-AB88-0000B4725554} = s 'ColorObject Class'
+		{
+			ProgID = s 'Colors.ColorObject.1'
+			VersionIndependentProgID = s 'Colors.ColorObject'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{75B0CC53-732F-11D2-AB88-0000B4725554}'
+		}
+	}
+}

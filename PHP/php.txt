@@ -1,0 +1,39 @@
+# php + apache Set up
+## command only(not use Dockerfile)
+1. Go to the following working directory:
+C:\Users\MatsumotoMinoru\php\php-book
+
+2. Run php container with apache.
+docker container run -d --name php-book -v C:\Users\MatsumotoMinoru\php\php-book:/var/www/html -p 80:80 php:7.2-apache
+
+3. Create index.php if it is not created.
+docker container exec -it php-book bash
+echo '<?php phpinfo();' > index.php
+
+4. Access to localhost in the browser.
+
+## Dockerfile
+1. Go to the following working directory:
+C:\Users\MatsumotoMinoru\OneDrive\ドキュメント\PHP\honkaku
+
+2. Write to the Dockerfile 
+FROM php:7.2-apache
+# src/ is the directory containing all your PHP code.
+COPY src/ /var/www/html/
+
+3.Run the commands to build and run the Docker image:
+docker build -t my-php-app .
+docker run -d --name my-running-app -p 80:80 my-php-app
+
+4. Access to localhost in the browser.
+
+Note:If you alter PHP codes and you want to apply this change, you need to rebuild Docker image.
+
+# php + apache + mysql
+
+
+# php + nginx + mysql + CakePHP
+## Docker Compose
+1. Need php + nginx docker image and mysql docker image.
+
+2.

@@ -1,0 +1,9 @@
+filename=Vboxメモ.txt,crc32=0x8083f9d7,comp_size=1929, uncomp_size=6806
+filename=OllyDump.c,crc32=0x1266cf9,comp_size=7414, uncomp_size=35672
+filename=OllyDump.rc,crc32=0xc278977c,comp_size=2265, uncomp_size=9002
+filename=rebIT.c,crc32=0x9f6356c2,comp_size=5157, uncomp_size=20308
+filename=RebuildImport.c,crc32=0x808cce1e,comp_size=8258, uncomp_size=46662
+filename=resource.h,crc32=0xbd3d23e2,comp_size=580, uncomp_size=2998
+filename=tElock096メモ.txt,crc32=0x51065c50,comp_size=922, uncomp_size=4826
+filename=tElockメモ.txt,crc32=0xcc04ffa0,comp_size=850, uncomp_size=3840
+filename=Makefile,crc32=0x831afd6,comp_size=773, uncomp_size=1675
