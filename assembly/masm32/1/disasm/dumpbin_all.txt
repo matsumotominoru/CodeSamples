@@ -1,0 +1,154 @@
+Microsoft (R) COFF/PE Dumper Version 14.29.30153.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file hello.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+             14C machine (x86)
+               3 number of sections
+        43259F5E time date stamp Tue Sep 13 00:31:42 2005
+               0 file pointer to symbol table
+               0 number of symbols
+              E0 size of optional header
+             10F characteristics
+                   Relocations stripped
+                   Executable
+                   Line numbers stripped
+                   Symbols stripped
+                   32 bit word machine
+
+OPTIONAL HEADER VALUES
+             10B magic # (PE32)
+            5.12 linker version
+             200 size of code
+             400 size of initialized data
+               0 size of uninitialized data
+            1000 entry point (00401000)
+            1000 base of code
+            2000 base of data
+          400000 image base (00400000 to 00403FFF)
+            1000 section alignment
+             200 file alignment
+            4.00 operating system version
+            0.00 image version
+            4.00 subsystem version
+               0 Win32 version
+            4000 size of image
+             400 size of headers
+               0 checksum
+               3 subsystem (Windows CUI)
+               0 DLL characteristics
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+               0 [       0] RVA [size] of Export Directory
+            2010 [      28] RVA [size] of Import Directory
+               0 [       0] RVA [size] of Resource Directory
+               0 [       0] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+               0 [       0] RVA [size] of Base Relocation Directory
+               0 [       0] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+               0 [       0] RVA [size] of Thread Storage Directory
+               0 [       0] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+            2000 [      10] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+      96 virtual size
+    1000 virtual address (00401000 to 00401095)
+     200 size of raw data
+     400 file pointer to raw data (00000400 to 000005FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+RAW DATA #1
+  00401000: 68 00 30 40 00 E8 0A 00 00 00 6A 00 E8 73 00 00  h.0@.è....j.ès..
+  00401010: 00 CC CC CC 55 8B EC 83 C4 F4 6A F5 E8 69 00 00  .ÌÌÌU.ì.Äôjõèi..
+  00401020: 00 89 45 FC FF 75 08 E8 20 00 00 00 89 45 F4 6A  ..Eüÿu.è ....Eôj
+  00401030: 00 8D 45 F8 50 FF 75 F4 FF 75 08 FF 75 FC E8 4D  ..EøPÿuôÿu.ÿuüèM
+  00401040: 00 00 00 8B 45 F8 C9 C2 04 00 CC CC 55 8B EC 53  ....EøÉÂ..ÌÌU.ìS
+  00401050: 8B 45 08 8D 50 03 8B 18 83 C0 04 8D 8B FF FE FE  .E..P....À...ÿþþ
+  00401060: FE F7 D3 23 CB 81 E1 80 80 80 80 74 E9 F7 C1 80  þ÷Ó#Ë.á....té÷Á.
+  00401070: 80 00 00 75 06 C1 E9 10 83 C0 02 D0 E1 1B C2 5B  ...u.Áé..À.Ðá.Â[
+  00401080: C9 C2 04 00 FF 25 08 20 40 00 FF 25 00 20 40 00  ÉÂ..ÿ%. @.ÿ%. @.
+  00401090: FF 25 04 20 40 00                                ÿ%. @.
+
+SECTION HEADER #2
+  .rdata name
+      80 virtual size
+    2000 virtual address (00402000 to 0040207F)
+     200 size of raw data
+     600 file pointer to raw data (00000600 to 000007FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+RAW DATA #2
+  00402000: 56 20 00 00 66 20 00 00 48 20 00 00 00 00 00 00  V ..f ..H ......
+  00402010: 38 20 00 00 00 00 00 00 00 00 00 00 72 20 00 00  8 ..........r ..
+  00402020: 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00  . ..............
+  00402030: 00 00 00 00 00 00 00 00 56 20 00 00 66 20 00 00  ........V ..f ..
+  00402040: 48 20 00 00 00 00 00 00 80 00 45 78 69 74 50 72  H ........ExitPr
+  00402050: 6F 63 65 73 73 00 34 01 47 65 74 53 74 64 48 61  ocess.4.GetStdHa
+  00402060: 6E 64 6C 65 00 00 9E 02 57 72 69 74 65 46 69 6C  ndle....WriteFil
+  00402070: 65 00 6B 65 72 6E 65 6C 33 32 2E 64 6C 6C 00 00  e.kernel32.dll..
+
+  Section contains the following imports:
+
+    kernel32.dll
+                402000 Import Address Table
+                402038 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                  134 GetStdHandle
+                  29E WriteFile
+                   80 ExitProcess
+
+SECTION HEADER #3
+   .data name
+      1C virtual size
+    3000 virtual address (00403000 to 0040301B)
+     200 size of raw data
+     800 file pointer to raw data (00000800 to 000009FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+RAW DATA #3
+  00403000: 48 65 79 2C 20 74 68 69 73 20 61 63 74 75 61 6C  Hey, this actual
+  00403010: 6C 79 20 77 6F 72 6B 73 2E 0D 0A 00              ly works....
+
+  Summary
+
+        1000 .data
+        1000 .rdata
+        1000 .text

@@ -1,0 +1,66 @@
+Microsoft (R) COFF/PE Dumper Version 14.29.30153.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file hello.exe
+
+File Type: EXECUTABLE IMAGE
+
+  00401000: 68 00 30 40 00     push        403000h
+  00401005: E8 0A 00 00 00     call        00401014
+  0040100A: 6A 00              push        0
+  0040100C: E8 73 00 00 00     call        00401084
+  00401011: CC                 int         3
+  00401012: CC                 int         3
+  00401013: CC                 int         3
+  00401014: 55                 push        ebp
+  00401015: 8B EC              mov         ebp,esp
+  00401017: 83 C4 F4           add         esp,0FFFFFFF4h
+  0040101A: 6A F5              push        0FFFFFFF5h
+  0040101C: E8 69 00 00 00     call        0040108A
+  00401021: 89 45 FC           mov         dword ptr [ebp-4],eax
+  00401024: FF 75 08           push        dword ptr [ebp+8]
+  00401027: E8 20 00 00 00     call        0040104C
+  0040102C: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  0040102F: 6A 00              push        0
+  00401031: 8D 45 F8           lea         eax,[ebp-8]
+  00401034: 50                 push        eax
+  00401035: FF 75 F4           push        dword ptr [ebp-0Ch]
+  00401038: FF 75 08           push        dword ptr [ebp+8]
+  0040103B: FF 75 FC           push        dword ptr [ebp-4]
+  0040103E: E8 4D 00 00 00     call        00401090
+  00401043: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00401046: C9                 leave
+  00401047: C2 04 00           ret         4
+  0040104A: CC                 int         3
+  0040104B: CC                 int         3
+  0040104C: 55                 push        ebp
+  0040104D: 8B EC              mov         ebp,esp
+  0040104F: 53                 push        ebx
+  00401050: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00401053: 8D 50 03           lea         edx,[eax+3]
+  00401056: 8B 18              mov         ebx,dword ptr [eax]
+  00401058: 83 C0 04           add         eax,4
+  0040105B: 8D 8B FF FE FE FE  lea         ecx,[ebx+FEFEFEFFh]
+  00401061: F7 D3              not         ebx
+  00401063: 23 CB              and         ecx,ebx
+  00401065: 81 E1 80 80 80 80  and         ecx,80808080h
+  0040106B: 74 E9              je          00401056
+  0040106D: F7 C1 80 80 00 00  test        ecx,8080h
+  00401073: 75 06              jne         0040107B
+  00401075: C1 E9 10           shr         ecx,10h
+  00401078: 83 C0 02           add         eax,2
+  0040107B: D0 E1              shl         cl,1
+  0040107D: 1B C2              sbb         eax,edx
+  0040107F: 5B                 pop         ebx
+  00401080: C9                 leave
+  00401081: C2 04 00           ret         4
+  00401084: FF 25 08 20 40 00  jmp         dword ptr ds:[00402008h]
+  0040108A: FF 25 00 20 40 00  jmp         dword ptr ds:[00402000h]
+  00401090: FF 25 04 20 40 00  jmp         dword ptr ds:[00402004h]
+
+  Summary
+
+        1000 .data
+        1000 .rdata
+        1000 .text
