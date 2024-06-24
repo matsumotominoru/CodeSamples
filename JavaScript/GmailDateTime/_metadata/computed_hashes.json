@@ -1,0 +1,56 @@
+{
+    "file_hashes": [
+        {
+            "block_hashes": [
+                "w55x0AJFFcwWdWcW4ClYf0kZWexUrpp0S68bmG2Fsdc="
+            ],
+            "block_size": 4096,
+            "path": "event.js"
+        },
+        {
+            "block_hashes": [
+                "u1OCJLE881pS5sXZ+XkY5W6eQx60R79n7gpVAqW7oCE=",
+                "/lzmMbqhb5DqpRxfs//ymy6k/i7AqqdIbnXieFpSXp4="
+            ],
+            "block_size": 4096,
+            "path": "main.js"
+        },
+        {
+            "block_hashes": [
+                "fEcPff96EWPqJiyr+ikVDYqvRPjAr8hhsyN0BkwWSzc=",
+                "R9QYuDMXamnxMAANQoW3KogJR0XYxT4edhK2A2rS+Cg=",
+                "PyYCzk4S7W+s9vJoYU6LaTdI7j4E1iMqYlJ7u2AWXvw=",
+                "4ykW2yRFLvsi7ReWkD8KctGiZi8mR5/3ytYfxfJwOEM=",
+                "UMPH3NDSHvrcam/fNz284L/bYDmukEzyDQd1AXu/eeM=",
+                "ykQdDHuT6uWdYMlXy0oUV0mj6c43Cf5KnaTX5oc0CqM="
+            ],
+            "block_size": 4096,
+            "path": "mutation-summary.min.js"
+        },
+        {
+            "block_hashes": [
+                "3w9rXyTGoAeAWWDh/2rVM2+i0lPf3qInva8qCSzfAsI=",
+                "mnvXdAfX+C2/NiK9cFgK/303lYhOKzrBvPe6miBHAUs="
+            ],
+            "block_size": 4096,
+            "path": "options.html"
+        },
+        {
+            "block_hashes": [
+                "xMkYXZYDo1g5YZmHXtdw6053s9VitzRtQFgesgQpyf0="
+            ],
+            "block_size": 4096,
+            "path": "options.js"
+        },
+        {
+            "block_hashes": [
+                "YgtKlI4sMJLZbGO+rZT99OiNcNgbGVAShfsCG2hmRxg=",
+                "iYshnfqi1Flc4Sct6DfPiQ+cvjALGsujF9CFfgjVvWk=",
+                "06fVC8WKl14udHOciIML4LsvYzmbTDWXC0brHHDhkCA="
+            ],
+            "block_size": 4096,
+            "path": "toucan-banner-horizontal.png"
+        }
+    ],
+    "version": 2
+}

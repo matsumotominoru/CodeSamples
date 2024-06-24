@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gmail Show Time Options</title>
+	<style>
+		body {
+			width: 666px;
+			min-height: 480px;
+
+			margin: 0;
+			padding: 8px;
+			line-height: 1.5;
+			font-size: 13px;
+		}
+		a {
+		  display: inline-flex;
+		  margin-bottom: -1px;
+		}
+		legend {
+			margin: 0;
+			padding: 0;
+			padding-top: 8px;
+		}
+		fieldset {
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+		label {
+			margin: 4px 0;
+			display: block;
+		}
+		label > span {
+			font-size: smaller;
+		}
+		label input[type="radio"] {
+			margin-right: 8px;
+		}
+		input[type="text"] {
+			margin-top: 3px;
+			width: 100%;
+		}
+		#reset {
+			float: right;
+		}
+		ul {
+			margin: 0;
+		}
+		ul li {
+			font-family: monospace;
+			font-size: smaller;
+		}
+		input[name="format_custom_value"] {
+			font-family: monospace;
+		}
+		div {
+			display: none;
+		}
+		div#modules_content {
+			display: block;
+		}
+		button {
+			-webkit-padding-end: 10px;
+			-webkit-padding-start: 10px;min-height: 2em;
+			min-width: 4em;
+			-webkit-appearance: none;
+			user-select: none;
+			background-image: linear-gradient(rgb(237, 237, 237), rgb(237, 237, 237) 38%, rgb(222, 222, 222));
+			box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 0px, rgba(255, 255, 255, 0.75) 0px 1px 2px inset;
+			color: rgb(68, 68, 68);
+			text-shadow: rgb(240, 240, 240) 0px 1px 0px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba(0, 0, 0, 0.25);
+			border-image: initial;
+			border-radius: 2px;
+			font: inherit;
+			margin: 0px 1px 0px 0px;
+			outline: none;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 2px 6px 3px;
+			align-items: flex-start;
+			cursor: default;
+			background-color: buttonface;
+			text-rendering: auto;
+			letter-spacing: normal;
+			word-spacing: normal;
+			text-transform: none;
+			text-indent: 0px;
+			display: inline-block;
+			-webkit-writing-mode: horizontal-tb;
+		}
+		button.active, button.active:hover {
+			background-image: linear-gradient(rgb(37, 137, 37), rgb(37, 137, 37) 38%, rgb(22, 122, 22));
+			color: rgb(268, 268, 268);
+			text-shadow: none;
+		}
+
+		span.tabs {
+			display: block;
+			border-bottom: 1px solid #eee;
+		}
+		span.tabs a {
+			color: #888;
+			border: none;
+			text-decoration: none;
+			margin-right: 8px;
+			padding-bottom: 2px;
+		}
+		span.tabs a.active {
+			color: #000;
+			border-bottom: 1px solid #ccc;
+		}
+
+		table {
+			width: 100%;
+		}
+		th {
+			text-align: left;
+		}
+		th, td {
+			padding-right: 10px;
+		}
+		.tar {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+
+  <a href="https://jointoucan.com/partners/gmail-show-time" target="_blank"><img src="toucan-banner-horizontal.png" width="668" height="30"></a>
+
+  <span class="tabs">
+    <a href="#" class="tab active" id="update">Update</a>
+    <a href="#" class="tab" id="options">Options</a>
+  </span>
+
+  <div class="tab_content" id="update_content">
+    <p>
+      2021-01-14<br>
+      Google announced closing the store for in-app purchases.<br>
+      Custom format is now available for free, the store is stripped from the code.
+    </p>
+
+    <hr>
+
+    <p>
+      <a href="https://www.paypal.com/donate?hosted_button_id=24NS3DTXA4N2N" target="_blank">Support the project through PayPal</a>
+    </p>
+  </div>
+
+  <div class="tab_content" id="options_content">
+    <form action="#">
+      <fieldset>
+        <legend>Date/time format:</legend>
+
+        <label><input type="radio" name="format" value="gmail" id="format_gmail"> Gmail default
+        </label>
+
+        <label><input type="radio" name="format" value="custom" id="format_custom"> Custom</b>
+          <input type="text" name="format_custom_value" value="" id="format_custom_value">
+        </label>
+
+        Default: (%Y-%m-%d %H:%M)<br>
+        Currently supported format specifiers:<br>
+        <ul>
+          <li>%Y - Year (2017)</li>
+          <li>%y - Year (00-99)</li>
+          <li>%m - Month (01-12)</li>
+          <li>%-m - Month (1-12)</li>
+          <li>%b - Abbreviated month name (Mar)</li>
+          <li>%B - Full month name (March)</li>
+          <li>%U - Week number</li>
+          <li>%d - Day of the month (01-31)</li>
+          <li>%-d - Day of the month (1-31)</li>
+          <li>%a - Abbreviated weekday name (Wed)</li>
+          <li>%A - Full weekday name (Wednesday)</li>
+          <li>%H - Hour (00-23)</li>
+          <li>%-H - Hour (0-23)</li>
+          <li>%I - Hour (01-12)</li>
+          <li>%-I - Hour (1-12)</li>
+          <li>%M - Minute (00-59)</li>
+          <li>%p - AM/PM</li>
+        </ul>
+        More formatting options may be added on request.
+      </fieldset>
+
+      <br>
+
+      <button id="save">Save</button> <span id="status"><a href="https://www.paypal.com/donate?hosted_button_id=24NS3DTXA4N2N" target="_blank">Support the project through PayPal</a></span>
+      <button id="reset">Reset</button>
+    </form>
+  </div>
+
+	<div id="errorlog"></div>
+
+	<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Shows full date/time in email listing and detail headers. Support custom date/time format."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Gmail Show Time"
+   }
+}

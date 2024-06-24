@@ -1,0 +1,36 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "48": "icon48.png"
+      }
+   },
+   "background": {
+      "service_worker": "event.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "mutation-summary.min.js", "main.js" ],
+      "matches": [ "https://mail.google.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "differential_fingerprint": "1.9208b67adc1ab291bfefc028cd280f546e04bcaff216e5ba2f6afb89cb586cbe",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC8gP+7Rgimf2+2KRcjE1SLU960wwz6jrtCc0UdYiadojyESYjPY0gbhjYYNN0ackgEjsZU1XQHbqVe1slsIiOlZRayJPimtIM3yg/S1RTYJCGJliSVoYgI/cM7L48mJWkwTn1hMjrEIpWjDy7BNg6Idlkownk0rTFxAOPRU69MfwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "options_ui": {
+      "open_in_tab": false,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.7.1"
+}

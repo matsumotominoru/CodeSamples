@@ -1,0 +1,10 @@
+case statement
+commma evalate,
+variable __extends
+MutationObserver
+HTMLElement
+instanceof
+Node
+== and ===
+!! and !
+>>>
