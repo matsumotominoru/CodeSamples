@@ -2,7 +2,6 @@
 //
 #include "resource.h"
 #include <windows.h>
-
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
@@ -11,15 +10,15 @@ MYMENU MENU
 BEGIN
     POPUP "ファイル(&F)"
     BEGIN
-        MENUITEM "終了(&X)",                    IDM_END
+        MENUITEM "終了(&X)",                    ID_FILE_EXIT
     END
     POPUP "オプション(&O)"
     BEGIN
-        MENUITEM "ダイアログを出す(&D)",        IDM_DLG
+        MENUITEM "ダイアログを出す(&D)",        ID_OPTION_DIALOG
     END
     POPUP "ヘルプ(&H)"
     BEGIN
-        MENUITEM "About(&A)",                   IDM_ABOUT
+        MENUITEM "About(&A)",                   ID_HELP_ABOUT
     END
 END
 
