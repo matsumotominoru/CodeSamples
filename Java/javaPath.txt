@@ -10,11 +10,6 @@ PATH C:\Program Files\OpenJDK\jdk-16\bin;%PATH%
 javac
 java
 
-■oldPath
-C:\Program Files (x86)\Common Files\Oracle\Java\javapath
-OracleのJava
-PATH C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%PATH%
-
-C:\Program Files\jdk-12.0.1\bin
-jdkのjava
-PATH C:\Program Files\jdk-12.0.1\bin;%PATH%
+■Compile and Run
+"C:\Program Files\OpenJDK\jdk-16\bin\javac.exe" Sample1.java
+"C:\Program Files\OpenJDK\jdk-16\bin\java.exe" Sample1
